@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {DataproviderService} from './modules/todo/services/dataprovider/dataprovider.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'huk-todo-list';
+  title = 'todo-list';
+
+  constructor() {
+  }
 }

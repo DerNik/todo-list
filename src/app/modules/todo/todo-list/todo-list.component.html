@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <app-list-adder (newItem)="addNewItem($event)"></app-list-adder>
+  <h1>{{header}}</h1>
+  <div class="row" *ngIf="list.length > 0; else noItems">
+    <div *ngFor="let item of list; index as i;" class="item col-xs-12 col-sm-12 col-md-4 col-lg-2"><app-todo-item (delete)="deleteItem($event)" (done)="updateItem($event)" [data]="item"></app-todo-item></div>
+  </div>
+  <ng-template #noItems>{{noItmTxt}}</ng-template>
+</div>
+

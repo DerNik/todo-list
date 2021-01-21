@@ -1,0 +1,11 @@
+<div (click)="setItemDone()" class="chip" [ngStyle]="{'background-color': data.status == status.OPEN ? '#6CFF33' : '#F00'}">
+  <span class="closebtn" (click)="deleteItem()">&times;</span>
+  <div >
+    <p>
+      {{data.date}}
+    </p>
+    <p>
+    {{data.description}} <br/>
+    </p>
+  </div>
+</div>

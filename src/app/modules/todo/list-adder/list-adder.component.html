@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2>{{header}}</h2>
+    <form class="needs-validation"(ngSubmit)="addItem();">
+      <div class="row">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="description">{{descHead}}</label>
+          <input type="text" class="form-control" [(ngModel)]="todo.description" name="desc" id="description" placeholder="{{descPH}}" required>
+          <div class="invalid-feedback">{{descErrtxt}}</div>
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="description">{{dateHead}}</label>
+          <input type="text"
+                 placeholder="{{datePH}}"
+                 class="form-control"
+                 bsDatepicker
+                 name="datepicker"
+                 [(ngModel)]="date"
+                 [bsConfig]="{ isAnimated: true }">
+        </div>
+      </div>
+      <button type="submit" (click)="validate($event)" class="btn btn-primary">{{addBtnTxt}}</button>
+    </form>
+  </div>
+</div>
