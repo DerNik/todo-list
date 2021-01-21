@@ -5,18 +5,20 @@
       <div class="row">
         <div class="form-group col-lg-6 col-md-6 col-sm-12">
           <label for="description">{{descHead}}</label>
-          <input type="text" class="form-control" [(ngModel)]="todo.description" name="desc" id="description" placeholder="{{descPH}}" required>
+          <input type="text" autocomplete="off" class="form-control" [(ngModel)]="todo.description" name="desc" id="description" placeholder="{{descPH}}" required>
           <div class="invalid-feedback">{{descErrtxt}}</div>
         </div>
         <div class="form-group col-lg-6 col-md-6 col-sm-12">
           <label for="description">{{dateHead}}</label>
           <input type="text"
+                 autocomplete="off"
                  placeholder="{{datePH}}"
                  class="form-control"
                  bsDatepicker
                  name="datepicker"
                  [(ngModel)]="date"
-                 [bsConfig]="{ isAnimated: true }">
+                 [bsConfig]="{ isAnimated: true }"
+                 readonly>
         </div>
       </div>
       <button type="submit" (click)="validate($event)" class="btn btn-primary">{{addBtnTxt}}</button>
